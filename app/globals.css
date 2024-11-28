@@ -282,7 +282,7 @@ nav {
 
 .nav-toggle:hover {
     color: var(--primary-700);
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
 }
 
 .logo {
@@ -306,12 +306,6 @@ nav {
 }
 
 .links-container {
-    height: 0;
     overflow: hidden;
     transition: var(--transition);
-}
-
-.show-container {
-    /* fixed container height */
-    height: 10rem;
 }
