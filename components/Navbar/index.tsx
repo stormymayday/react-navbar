@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import { links } from "@/data";
+import { links, social } from "@/data";
 import logo from "@/assets/logo.svg";
 import Image from "next/image";
 
@@ -32,7 +32,7 @@ function Navbar() {
                         {showLinks ? <ImCross /> : <FaBars />}
                     </button>
                 </div>
-                {/* {showLinks && ( */}
+
                 <div
                     className="links-container"
                     ref={linksContainerRef}
@@ -49,7 +49,19 @@ function Navbar() {
                         })}
                     </ul>
                 </div>
-                {/* )} */}
+
+                <ul className="social-icons">
+                    {social.map((socialItem) => {
+                        const { id, url, icon: Icon } = socialItem;
+                        return (
+                            <li key={id}>
+                                <a href={url} target="_blank">
+                                    <Icon />
+                                </a>
+                            </li>
+                        );
+                    })}
+                </ul>
             </div>
         </nav>
     );
