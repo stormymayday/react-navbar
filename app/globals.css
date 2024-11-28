@@ -290,6 +290,15 @@ nav {
     width: auto;
 }
 
+.logo {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--primary-500);
+}
+
 .links a {
     color: var(--grey-700);
     font-size: 1rem;
